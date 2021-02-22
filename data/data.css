@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 100%;
+    background-color: white;
+}
+.top{
+  width: 100%;
+  padding: 30px 0px;
+  font-size: 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 1000ms;
+  position: fixed;
+}
+.logo{
+    font-size: 25px;
+    float: left;
+    margin-left: 30px;
+}
+nav{
+    float: right;
+    margin-right: 50px;
+}
+nav ul{
+    list-style: none ;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 25px;
+    /* font-size: 17px; */
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    color: red;
+    border-radius: 5px;
+}
+.topnho{
+    padding: 15px 0px;
+    font-size: 16px;
+    background-color: rgb(65, 65, 65);
+    color: rgb(255, 255, 255);
+}
+.than{
+  width: 100%;
+  padding: 100px 0px;
+}
+.anh{
+    text-align: center;
+}
+.ten{
+    font-size: 100px;
+    text-align: center;
+}
+.mota{
+    padding: 0px 380px;
+    text-align: center;
+    width: 50%;  
+    font-size: 25px;
+
+}
