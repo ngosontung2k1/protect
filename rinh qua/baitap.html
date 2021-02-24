@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="bt.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Slide Down Box Menu with jQuery and CSS3" />
+    <meta name="keywords" content="jquery, css3, sliding, box, menu, cube, navigation, portfolio, thumbnails" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>shop ST</title>
+    <style>
+        body {
+            /* background: #333 url(bg.jpg) repeat top left; */
+            background: white;
+            font-family: Arial;
+        }
+
+        span.reference {
+            position: fixed;
+            left: 10px;
+            /* bottom: 10px; */
+            font-size: 12px;
+        }
+
+        span.reference a {
+            color: rgb(5, 5, 5);
+            text-transform: uppercase;
+            text-decoration: none;
+            text-shadow: 1px 1px 1px #000;
+            margin-right: 30px;
+        }
+
+        span.reference a:hover {
+            color: rgb(3, 3, 3);
+        }
+
+        ul.sdt_menu {
+            margin-top: 30px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row bg-light">
+        <div class="col-sm-2 d-flex" style="background-color: white;"><i class="fas fa-phone fa-1x m-2"></i>
+            <p>0522564268</p>
+        </div>
+        <div class="col-sm-3 d-flex" style="background-color: white;"><i class="far fa-envelope fa-1x m-2"></i>
+            <p>ngosontung0309@gmail.com</p>
+        </div>
+        <div class="col-sm-4 d-flex" style="background-color: white;"></div>
+        <div class="col-sm-3 d-flex " style="background-color: white;">
+            <div class="container">
+                <div class="btn-group">
+                    <div class="container ">
+
+                        <!-- Button to Open the Modal -->
+                        <button type="button " class="btn btn-light" data-toggle="modal" data-target="#myModal">
+                            Log in
+                        </button>
+
+                        <!-- The Modal -->
+                        <div class="modal  m-5" id="myModal">
+
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h3 class="modal-title">Log in</h3>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <form action="/action_page.php">
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email"
+                                                        placeholder="Enter email" name="email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="pwd">Password:</label>
+                                                    <input type="password" class="form-control" id="pwd"
+                                                        placeholder="Enter password" name="pswd">
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="checkbox" name="remember">
+                                                        Remember me
+                                                    </label>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </button>
+                    <div class="btn-group ">
+                        <select name="" id="">
+                            <option value="">English</option>
+                            <option value="">Tây Ban Nha</option>
+                            <option value="">Vietnam</option>
+                            <option value="">中国</option>
+                            <option value="">Canada</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" style="background-color:white;">
+                <img src="1.png" width="200px" height="100px" alt="">
+            </div>
+            <div class="col-sm-5" style="background-color:white;">
+                <nav class="navbar navbar-expand-sm navbar-dark mt-3">
+                    <form class="form-inline" action="/action_page.php">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </nav>
+            </div>
+            <div class="col-sm-3" style="background-color:white;">
+                <div class="icon mt-4">
+                    <i class="fas fa-shopping-cart fa-3x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <ul id="sdt_menu" class="sdt_menu">
+            <li>
+                <a href="http://127.0.0.1:5501/home.html">
+                    <!-- <img src="2.jpg" alt="" /> -->
+                    <span class="sdt_active"></span>
+                    <span class="sdt_wrap">
+                        <span class="sdt_link">Trang chủ</span>
+                        <span class="sdt_descr">Giới thiệu</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <!-- <img src="2.jpg" alt="" /> -->
+                    <span class="sdt_active"></span>
+                    <span class="sdt_wrap">
+                        <span class="sdt_link">Mua bán</span>
+                        <span class="sdt_descr">Giới thiệu</span>
+                    </span>
+                </a>
+                <div class="sdt_box">
+                    <a href="">Điện thoại</a>
+                    <a href="">Tivi</a>
+                    <a href="">Laptop</a>
+                    <a href="#">Khác</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <!-- <img src="2.jpg" alt="" /> -->
+                    <span class="sdt_active"></span>
+                    <span class="sdt_wrap">
+                        <span class="sdt_link">Hãng</span>
+                        <span class="sdt_descr">Giới thiệu</span>
+                    </span>
+                </a>
+
+                <div class="sdt_box">
+                    <a href="">Samsung</a>
+                    <a href="">Oppo</a>
+                    <a href="">Apple</a>
+                    <a href="">LG</a>
+                    <a href="#">Khác</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <!-- <img src="2.jpg" alt="" /> -->
+                    <span class="sdt_active"></span>
+                    <span class="sdt_wrap">
+                        <span class="sdt_link">Giá</span>
+                        <span class="sdt_descr">Giới thiệu</span>
+                    </span>
+                </a>
+                <div class="sdt_box">
+                    <a href="">từ 1 đến 3 triệu</a>
+                    <a href="">từ 3 đến 6 triệu</a>
+                    <a href="">từ 6 đến 10 triệu</a>
+                    <a href="">từ 10 đến 15 triệu</a>
+                    <a href="">từ 15 đến 20 triệu</a>
+                    <a href="#">trên 20 triệu</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <!-- <img src="2.jpg" alt="" /> -->
+                    <span class="sdt_active"></span>
+                    <span class="sdt_wrap">
+                        <span class="sdt_link">Liên hệ</span>
+                        <span class="sdt_descr">liên hệ vơi chúng tôi</span>
+                    </span>
+                </a>
+                <div class="sdt_box">
+                    <a href="">Gmail</a>
+                    <a href="https://www.facebook.com/sontung0309/">Facebook</a>
+                    <a href="">zalo</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <!-- <img src="2.jpg" alt="" /> -->
+                    <span class="sdt_active"></span>
+                    <span class="sdt_wrap">
+                        <span class="sdt_link">Dịch vụ</span>
+                        <span class="sdt_descr">Giới thiệu</span>
+                    </span>
+                </a>
+                <div class="sdt_box">
+                    <a href="">Quảng cáo</a>
+                    <a href="">Đổi trả</a>
+                    <a href="">Chăm sóc Khách hàng</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slow">
+
+        <div class="col-sm-12" style="background-color: black;">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="2.jpg" alt="Los Angeles">
+                        <div class="carousel-caption">
+                            <h3>Samsung galaxy S21 utra</h3>
+                            <p>
+                                Vi xử lý: CPU 8 nhân, tốc độ tối đa 2.9GHz
+                                Tần số quét cao nhất: 120Hz</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="5.jpg" alt="Chicago">
+                        <div class="carousel-caption">
+                            <h3>Iphone 12 promax</h3>
+                            <p>CPU A14 Bionic</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="4.jpg" alt="New York">
+                        <div class="carousel-caption">
+                            <h3>khac</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="3.jpg" alt="Chicago">
+                        <div class="carousel-caption">
+                            <h3>khac</h3>
+
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#sdt_menu > li').bind('mouseenter', function () {
+                var $elem = $(this);
+                $elem.find('img')
+                    .stop(true)
+                    .animate({
+                        'width': '170px',
+                        'height': '170px',
+                        'left': '0px'
+                    }, 400, 'easeOutBack')
+                    .andSelf()
+                    .find('.sdt_wrap')
+                    .stop(true)
+                    .animate({ 'top': '140px' }, 500, 'easeOutBack')
+                    .andSelf()
+                    .find('.sdt_active')
+                    .stop(true)
+                    .animate({ 'height': '170px' }, 300, function () {
+                        var $sub_menu = $elem.find('.sdt_box');
+                        if ($sub_menu.length) {
+                            var left = '170px';
+                            if ($elem.parent().children().length == $elem.index() + 1)
+                                left = '-170px';
+                            $sub_menu.show().animate({ 'left': left }, 200);
+                        }
+                    });
+            }).bind('mouseleave', function () {
+                var $elem = $(this);
+                var $sub_menu = $elem.find('.sdt_box');
+                if ($sub_menu.length)
+                    $sub_menu.hide().css('left', '0px');
+
+                $elem.find('.sdt_active')
+                    .stop(true)
+                    .animate({ 'height': '0px' }, 300)
+                    .andSelf().find('img')
+                    .stop(true)
+                    .animate({
+                        'width': '0px',
+                        'height': '0px',
+                        'left': '85px'
+                    }, 400)
+                    .andSelf()
+                    .find('.sdt_wrap')
+                    .stop(true)
+                    .animate({ 'top': '25px' }, 500);
+            });
+        });
+    </script>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+
+    <!-- ZOOM -->
+
+    <script>
+        function magnify(imgID, zoom) {
+            var img, glass, w, h, bw;
+            img = document.getElementById(imgID);
+            /*create magnifier glass:*/
+            glass = document.createElement("DIV");
+            glass.setAttribute("class", "img-magnifier-glass");
+            /*insert magnifier glass:*/
+            img.parentElement.insertBefore(glass, img);
+            /*set background properties for the magnifier glass:*/
+            glass.style.backgroundImage = "url('" + img.src + "')";
+            glass.style.backgroundRepeat = "no-repeat";
+            glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+            bw = 3;
+            w = glass.offsetWidth / 2;
+            h = glass.offsetHeight / 2;
+            /*execute a function when someone moves the magnifier glass over the image:*/
+            glass.addEventListener("mousemove", moveMagnifier);
+            img.addEventListener("mousemove", moveMagnifier);
+            /*and also for touch screens:*/
+            glass.addEventListener("touchmove", moveMagnifier);
+            img.addEventListener("touchmove", moveMagnifier);
+            function moveMagnifier(e) {
+                var pos, x, y;
+                /*prevent any other actions that may occur when moving over the image*/
+                e.preventDefault();
+                /*get the cursor's x and y positions:*/
+                pos = getCursorPos(e);
+                x = pos.x;
+                y = pos.y;
+                /*prevent the magnifier glass from being positioned outside the image:*/
+                if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
+                if (x < w / zoom) { x = w / zoom; }
+                if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
+                if (y < h / zoom) { y = h / zoom; }
+                /*set the position of the magnifier glass:*/
+                glass.style.left = (x - w) + "px";
+                glass.style.top = (y - h) + "px";
+                /*display what the magnifier glass "sees":*/
+                glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+            }
+            function getCursorPos(e) {
+                var a, x = 0, y = 0;
+                e = e || window.event;
+                /*get the x and y positions of the image:*/
+                a = img.getBoundingClientRect();
+                /*calculate the cursor's x and y coordinates, relative to the image:*/
+                x = e.pageX - a.left;
+                y = e.pageY - a.top;
+                /*consider any page scrolling:*/
+                x = x - window.pageXOffset;
+                y = y - window.pageYOffset;
+                return { x: x, y: y };
+            }
+        }
+    </script>
+
+    <script>
+        /* Initiate Magnify Function
+        with the id of the image, and the strength of the magnifier glass:*/
+        magnify("myimage1", 3);
+    </script>
+</body>
+
+</html>
