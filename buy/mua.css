@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
-.container{
+.bodyContent{
     width: 100%;
     background-color: white;
 }
@@ -20,6 +20,28 @@ background: linear-gradient(78deg, rgba(129,125,121,1) 8%, rgba(78,62,56,1) 34%,
     font-size: 25px;
     float: left;
     margin-left: 30px;
+}
+.mau{
+    height: 100px;
+    width: 500px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    /* background-color: #008CBA; */
+
+}
+.mau1{
+    height: 100px;
+    width: 90px;
+    margin: 0px 5px;
+    /* background-color: #fd6e1d; */
+    
+}
+.anh1{
+    margin: 0px 15px;
+}
+.anh3{
+    margin-left: 12px;
 }
 nav{
     float: right;
@@ -52,8 +74,8 @@ nav a:hover{
 }
 
 .ten{
-  /* width: 100%; */
-  /* height: 35px; */
+  /* width: 100%;
+  height: 35px; */
   margin-top: 90px;
   padding: 0px 100px;
   font-size: 25px;
@@ -74,9 +96,8 @@ nav a:hover{
 }
 .bought{
     width: 1000px;
-    height: 500px;
-    
-    margin-left: 120px;
+    /* height: 790px; */
+    margin-left: 190px;
     display: flex;
 }
 .information{
@@ -84,12 +105,13 @@ nav a:hover{
 }
 .thongtin1{
     width: 500px;
-    height: 500px;
+    /* height: 500px; */
     
 }
 .thongtin{
     width: 500px;
-    height: 800px;
+    margin-left: 30px;
+    /* height: 800px; */
     background-color:white;
 }
 .thongtin2{
@@ -98,15 +120,12 @@ nav a:hover{
 }
 
 .item{
-    /* margin: auto; */
-    display: flex;
     margin: 10px 7.5px;
     width: 150px;
-    height: 50px;
     background-color: #ffffff;
     justify-content: space-between;
     border-radius: 5px; 
-    box-shadow: rgb(85, 79, 79) 1px 1px 25px 1px;
+    box-shadow: rgb(85, 79, 79) 1px 1px 1px 1px;
 }
 
 .tick{
@@ -162,7 +181,7 @@ nav a:hover{
     margin: 10px 25px;
     border-radius: 10px;
     width: 450px;
-    height: 220px;
+    /* height: 220px; */
     background-color: #ffffff;
     justify-content: space-between;
     border-radius: 5px; 
@@ -246,10 +265,125 @@ input[type='radio']:checked:after {
 .khuyenmai10{
     margin: 10px 20px;
 }
-.khuyenmai11 button{
-    width: 450px;
-    height: 75px;
-    background-color: coral;
-    border-radius: 5px;
-    margin-left: 25px;
+.button {
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    width: 490px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #dd8b0fe5;
+  }
+  
+  .button1:hover {
+    background: -webkit-linear-gradient(top,#f59000,#fd6e1d);
+    /* background-color: #ba7f00; */
+    color: white;
+  }
+
+  .button2 {
+    width: 250px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+  .button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .button3:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  .bought2{
+ 
+      width: 80%;
+      height: 800px;
+      margin: 10px 100px;
+      display: flex;
+  }
+  .bought3{
+      /* background-color: burlywood; */
+      width: 66%;
+      /* height: 100px; */
+  }
+  .bought4{
+    background-color: rgb(182, 109, 14);
+    width: 4%;
+    height: 100px;
+  }
+  .bought5{
+    width: 30%;
+    height: 500px;
 }
+  .thong{
+      margin: 15px 15px;
+      font-size: 20px;
+  }
+  .thong1{
+      width: 100%;
+      height: 20px;
+      display: flex;
+    
+  }
+  .thong2{
+    width: 40%;
+    height: 40px;
+  }
+  .thong3{
+    width: 60%;
+  }
+  .thong4{
+    /* padding: 10px 5px; */
+    font-size: 14px;
+    color: #666;
+    display: flex;
+  }
+  .mau10{
+      color: #288ad6;
+  }
+  .button4 {
+    
+    padding: 10px;
+    width: 100%;
+    background-color: #008CBA;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #008CBA;
+  }
+  .button4:hover {
+    background-color: white; 
+    color: black; 
+  }
+  .text4{
+      font-size: 25px;
+      margin: 10px 15px;
+  }
+  .thong15{
+      font-size: 20px;
+      margin: 10px 10px;
+  }
+  .text6{
+      margin: 10px 10px;
+      font-size: 20px;
+  }
+ 
+  
